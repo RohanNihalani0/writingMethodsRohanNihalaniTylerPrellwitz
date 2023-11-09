@@ -15,6 +15,11 @@ public class MediaLib
   public String toString() 
   {
     String info = "";
+    if(!(book == null)) {
+      info += book.getTitle();
+    }
+    
+    
     
     return info;
   }
