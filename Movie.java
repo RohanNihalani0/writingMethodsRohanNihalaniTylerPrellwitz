@@ -3,17 +3,17 @@
  *
  * A Book class for the MediaLibrary program
  */
-public class Book
+public class Movie
 {
   private String title;
-  private String author;
+  private double duration;
   private int rating;
   
   /*** Constructor ****/
-  public Book(String t, String a)
+  public Movie(String t, double d)
   {
     title = t;
-    author = a;
+    duration = d;
     rating = 0;
   }
   
@@ -22,8 +22,8 @@ public class Book
     return title;
   }
 
-  public String getAuthor() {
-    return author;
+  public double getDuration() {
+    return duration;
   }
   
   public int getRating() {
@@ -32,7 +32,7 @@ public class Book
   
   public String toString() 
   {
-    String info = "\"" + title + "\", written by " + author;
+    String info = "\"" + title + "\"," + duration + " hours long";
     if (rating != 0) 
     { 
       info += ", rating is " + rating;
@@ -45,8 +45,8 @@ public class Book
     title = t;
   }
 
-  public void setAuthor(String a) {
-    author = a;
+  public void setDuration(double d) {
+    duration = d;
   }
   
   public void adjustRating(int value) {
@@ -55,8 +55,8 @@ public class Book
     }
   }
 
-   public boolean equals(Book b) {
-    if(this.title.equals(b.title) && this.author.equals(b.author)) {
+   public boolean equals(Movie m) {
+    if(this.title.equals(m.title) && this.duration == m.duration) {
       return true;
     } else {
       return false;
