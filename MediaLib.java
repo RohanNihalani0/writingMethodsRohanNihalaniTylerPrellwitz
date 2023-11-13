@@ -7,6 +7,7 @@ public class MediaLib
 {
   private Book book;
   private Movie movie;
+  public static String owner = "PLTW";
   // public void testbook(Book tester) {
   //   tester.setTitle("new title");
   //   System.out.println("the title was changed to " + tester.getTitle());
@@ -34,8 +35,14 @@ public class MediaLib
       info += movie.getTitle();
     }
     
-    
-    
     return info;
+  }
+
+  public static String getOwner() {
+    return owner;
+  }
+
+  public static void changeOwner(String name) {
+    owner = name;
   }
 }
